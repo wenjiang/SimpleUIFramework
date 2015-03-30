@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- setting array -->
+    <array name="array_setting">
+        <item>@array/array_setting_id</item>
+        <item>@array/array_setting_icon</item>
+        <item>@array/array_setting_content</item>
+    </array>
+
+    <integer-array name="array_setting_id">
+        <item>@id/iv_icon</item>
+        <item>@id/tv_content</item>
+    </integer-array>
+
+    <integer-array name="array_setting_icon">
+        <item>@drawable/search</item>
+        <item>@drawable/setting</item>
+    </integer-array>
+
+    <string-array name="array_setting_content">
+        <item>@string/search</item>
+        <item>@string/setting</item>
+    </string-array>
+</resources>

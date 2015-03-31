@@ -1,8 +1,10 @@
 package com.zwb.simple.ui;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.zwb.simple.utils.LogUtil;
 
@@ -78,5 +80,25 @@ public abstract class BaseMultiViewHolder {
                 }
             }
         });
+    }
+
+    public void setItemMargin(Resources resources, View view, int leftMargin, int topMargin, int rightMargin, int bottomMargin) {
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) view.getLayoutParams();
+        if (leftMargin != 0) {
+            params.leftMargin = resources.getDimensionPixelOffset(leftMargin);
+        }
+
+        if (topMargin != 0) {
+            params.topMargin = resources.getDimensionPixelSize(topMargin);
+        }
+
+        if (rightMargin != 0) {
+            params.rightMargin = resources.getDimensionPixelSize(rightMargin);
+        }
+
+        if (bottomMargin != 0) {
+            params.bottomMargin = resources.getDimensionPixelSize(bottomMargin);
+        }
+        view.setLayoutParams(params);
     }
 }

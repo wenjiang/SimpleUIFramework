@@ -39,6 +39,7 @@ public class ExampleMultiViewHolder extends BaseMultiViewHolder {
                 TextView titleLeftText = (TextView) view.findViewById(R.id.tv_content);
                 titleLeftText.setText(titleArray.getString(i));
                 viewGroup.addView(view);
+                setItemMargin(resources, view, R.dimen.setting_layout_margin_left, R.dimen.setting_layout_margin_top, 0, 0);
                 setItemClick(this, view, iconId);
             }
         } catch (Exception e) {
@@ -52,10 +53,10 @@ public class ExampleMultiViewHolder extends BaseMultiViewHolder {
     }
 
     public void search() {
-        Toast.makeText(context, "搜索", Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "搜索", Toast.LENGTH_SHORT).show();
     }
 
     public void setting() {
-        Toast.makeText(context, "设置", Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "设置", Toast.LENGTH_SHORT).show();
     }
 }

@@ -82,6 +82,16 @@ public abstract class BaseMultiViewHolder {
         });
     }
 
+    /**
+     * 设置View的margin
+     *
+     * @param resources    Resources对象
+     * @param view         要设置的View
+     * @param leftMargin   左边的margin
+     * @param topMargin    顶部的margin
+     * @param rightMargin  右边的margin
+     * @param bottomMargin 底部的margin
+     */
     public void setItemMargin(Resources resources, View view, int leftMargin, int topMargin, int rightMargin, int bottomMargin) {
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) view.getLayoutParams();
         if (leftMargin != 0) {
